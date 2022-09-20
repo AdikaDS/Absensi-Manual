@@ -75,11 +75,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 if (TextUtils.isEmpty(datePicker.getText().toString())) {
                     Toast.makeText(MainActivity.this, "Kolom Masukkan tanggal tidak boleh kosong !",
                     Toast.LENGTH_SHORT).show();
+                }
                     if (TextUtils.isEmpty(timePicker.getText().toString())) {
                         Toast.makeText(MainActivity.this, "Kolom Masukkan waktu tidak boleh kosong !",
                                 Toast.LENGTH_SHORT).show();
                     }
-                }
                 else {
                     showAlertDialog();
                 }
@@ -107,10 +107,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         alertBuilder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                datePicker.getText().clear();
-                timePicker.getText().clear();
-                spinner.setSelection(0);
-                deskripsi.getText().clear();
+                
             }
         });
         alertBuilder.show();
