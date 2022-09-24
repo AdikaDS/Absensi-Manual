@@ -76,10 +76,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     Toast.makeText(MainActivity.this, "Kolom Masukkan tanggal tidak boleh kosong !",
                     Toast.LENGTH_SHORT).show();
                 }
-                    if (TextUtils.isEmpty(timePicker.getText().toString())) {
+                else if (TextUtils.isEmpty(timePicker.getText().toString())) {
                         Toast.makeText(MainActivity.this, "Kolom Masukkan waktu tidak boleh kosong !",
                                 Toast.LENGTH_SHORT).show();
-                    }
+                }
                 else {
                     showAlertDialog();
                 }
